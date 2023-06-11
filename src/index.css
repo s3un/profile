@@ -1,0 +1,62 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,300&family=Geologica:wght@900&family=Orbitron:wght@800;900&family=Roboto+Mono:ital,wght@0,400;1,700&family=Sarabun:wght@100&family=Secular+One&family=Sofia+Sans+Semi+Condensed:ital,wght@0,800;1,300;1,700&family=Zilla+Slab:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,300&family=Geologica:wght@100;800;900&family=Nunito+Sans:wght@300&family=Nunito:wght@300;400&family=Orbitron:wght@800;900&family=Raleway:wght@300&family=Roboto+Mono:ital,wght@0,400;1,700&family=Sarabun:wght@100&family=Secular+One&family=Sofia+Sans+Semi+Condensed:ital,wght@0,800;1,300;1,700&family=Zilla+Slab:wght@300&display=swap');
+
+.boldTest {
+  /* font-family: 'Cormorant Garamond', serif; */
+  font-family: 'Geologica', sans-serif;
+  /* font-family: 'Orbitron', sans-serif;
+  font-family: 'Roboto Mono', monospace;
+  font-family: 'Sarabun', sans-serif;
+  font-family: 'Secular One', sans-serif;
+  font-family: 'Sofia Sans Semi Condensed', sans-serif;
+  font-family: 'Zilla Slab', serif; */
+}
+
+
+.secondText {
+  /* font-family: 'Nunito', sans-serif; */
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: large;
+ 
+}
+
+.secondHeader {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: larger;
+}
+
+.newClass {
+  border: 1px solid red;
+}
+
+.imagesets {
+  height: 100px;
+}
+
+.tooltiptext {
+  position: relative;
+  width: 200px;
+  height: 80px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  /* border-radius: 100%; */
+  font-size: 17px;
+  padding-top: 11px;
+  margin-right: 10px;
+  font-family: 'Nunito Sans', sans-serif;
+  margin-top: 90px;
+  /* font-weight: 800; */
+}
+
+.newHeader {
+  font-size: 8.25rem !important;
+  /* position: absolute; */
+  opacity: 0.1;
+  font-weight: bold;
+  font-family: 'Geologica', sans-serif;
+  text-align: center;
+
+}
