@@ -62,7 +62,7 @@ export default function SkillSet() {
               <Box w={400}>
                 <InViewWrapper variant={bulletTextVariant(0.5, 0, 60, 1)}>
                   <Box pb={5}>
-                    <Text className="secondText">Vulnerability Managment</Text>
+                    <Text className="secondText">Vulnerability Managment 100%</Text>
                     <Progress hasStripe size="md" value={100} />
                   </Box>
                 </InViewWrapper>

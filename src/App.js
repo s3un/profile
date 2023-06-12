@@ -7,7 +7,7 @@ import Footer from './Components/footer'
 import Platform from './Components/platform'
 import Resume from "./Components/resume"
 import Service from "./Components/services"
-import Carousel from './Components/temp'
+// import Carousel from './Components/temp'
 
 function App() {
   return (
@@ -19,7 +19,6 @@ function App() {
       <Resume />
       <Skill />
       <Platform />
-      <Carousel />
       <Service />
       <Contact />
       <Footer />

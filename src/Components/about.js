@@ -86,15 +86,15 @@ export default function About() {
             <Box>
               <InViewWrapper variant={itemVariants(0.3, -30)}>
                 <Heading fontSize={"30px"} className="secondHeader">
-                  I'm {""}
+                  {/* I'm {""}
                   <Text
                     as={"span"}
                     bgGradient="linear(to-r, blue.500, blue.500)"
                     bgClip={"text"}
                   >
                     <span>Oluwaseun Muiz Oyebowale, </span>
-                  </Text>
-                  a cyber security Engineer.
+                  </Text> */}
+                  A cyber security Engineer.
                 </Heading>
               </InViewWrapper>
 
@@ -113,41 +113,6 @@ export default function About() {
               </InViewWrapper>
 
               <Divider mt={3} />
-              {/* <Box 
-              mt={10}>
-                <Heading
-                 className="secondText">
-                    Hobbies
-                </Heading>
-                <List>
-                    <ListItem
-                    fontSize={20}>
-                        <ListIcon as={MdCheckCircle} 
-                        fontSize={20}
-                        color='green.500'  
-                        className="secondText" />
-                            Gaming
-                    </ListItem>
-
-                    <ListItem
-                    fontSize={20}>
-                        <ListIcon as={MdCheckCircle} 
-                        fontSize={20}
-                        color='green.500'  
-                        className="secondText" />
-                            Traveling
-                    </ListItem>
-
-                    <ListItem
-                    fontSize={20}>
-                        <ListIcon as={MdCheckCircle} 
-                        fontSize={20}
-                        color='green.500'  
-                        className="secondText" />
-                            Music
-                    </ListItem>
-                </List>
-              </Box> */}
             </Box>
 
             <VStack w={{ lg: "550px" }} align={"flex.end"} padding={"3px"}>
