@@ -5,38 +5,31 @@ import {
   Text,
   Stack,
   Center,
-  StackDivider,
   useColorModeValue,
   VStack,
   Button,
-  HStack,
-  useBreakpointValue,
   Divider,
-  AbsoluteCenter,
-  Wrap,
-  WrapItem,
-  Avatar,
-  List,
-  ListItem,
-  ListIcon,
+  Flex,
+  useBreakpointValue,
 } from "@chakra-ui/react";
 
-import aV from "../img/console.png";
-import aVa from "../img/around(1).png";
-import { MdCheckCircle } from "react-icons/md";
 import { InViewWrapper, itemVariants, scaleInVariant } from "../motions";
 import bulletTextVariant from "../motions/bulletTextMotion";
 
+import { VisuallyHidden, VisuallyHiddenInput } from '@chakra-ui/react'
+
 export default function About() {
+  const isLargeScreen = useBreakpointValue({ base: false, lg : true})
+
   return (
-    <>
+    <Flex >
       <Container maxW={{ base: "full", lg: "container.xl" }} mt={10}>
-        <Box>
+        <Box> 
           <Heading fontSize={{ base: "2xl", md: "3xl", lg: "4xl" }}>
             <Center>
               <InViewWrapper variant={scaleInVariant(0.3, 1.5)}>
                 <Box position={"relative"}>
-                  <h1 className="newHeader">About me</h1>
+                {isLargeScreen &&<Text className="newHeader" id="aboutme">About me</Text> }
                   <Heading
                     // as={'span'}
                     position={"absolute"}
@@ -181,6 +174,6 @@ export default function About() {
           </Stack>
         </Box>
       </Container>
-    </>
+    </Flex>
   );
 }

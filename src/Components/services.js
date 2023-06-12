@@ -3,17 +3,13 @@ import {
   Heading,
   Container,
   Center,
-  useBreakpointValue,
-  SimpleGrid,
   Card,
-  CardHeader,
   Box,
   Stack,
   HStack,
-  Text,
-  background,
   Image,
   CardBody,
+  useBreakpointValue,
 } from "@chakra-ui/react";
 
 import { InViewWrapper, scaleInVariant } from "../motions";
@@ -28,6 +24,8 @@ export default function Service() {
     background: "url(webapp/src/img/me.PNG)",
   };
 
+  const isLargeScreen = useBreakpointValue({ base: false, lg : true})
+
   return (
     <>
       <Flex mt={10}>
@@ -36,7 +34,7 @@ export default function Service() {
             <Heading fontSize={{ base: "2xl", md: "3xl", lg: "4xl" }}>
               <Center>
                 <Box position={"relative"}>
-                  <h1 className="newHeader">Work Done</h1>
+                {isLargeScreen && <h1 className="newHeader">Work Done</h1> }
                   <Heading
                     // as={'span'}
                     position={"absolute"}

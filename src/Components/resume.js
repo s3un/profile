@@ -14,10 +14,7 @@ import {
   ListItem,
   ListIcon,
   Link,
-  useColorModeValue,
-  Icon,
   Badge,
-  Divider,
   useBreakpointValue,
 } from "@chakra-ui/react";
 // import { BsJustify } from 'react-icons/bs'
@@ -27,7 +24,7 @@ import { InViewWrapper, itemVariants, scaleInVariant } from "../motions";
 import bulletTextVariant from "../motions/bulletTextMotion";
 
 export default function Resume() {
-  // const isLargeScreen = useBreakpointValue({ base: false, lg : true})
+  const isLargeScreen = useBreakpointValue({ base: false, lg : true})
 
   return (
     <>
@@ -37,9 +34,8 @@ export default function Resume() {
             <Center>
               <InViewWrapper variant={scaleInVariant(0.3, 1.5)}>
                 <Box position={"relative"}>
-                  <h1 className="newHeader">Summary</h1>
+                {isLargeScreen && <h1 className="newHeader">Summary</h1> }
                   <Heading
-                    // as={'span'}
                     position={"absolute"}
                     top={0}
                     h={"100%"}
@@ -48,14 +44,6 @@ export default function Resume() {
                     justifyContent={"center"}
                     alignItems={"center"}
                     _after={{
-                      // content: "''",
-                      // width: "full",
-                      // height: useBreakpointValue({ base: "20%", md: "30%" }),
-                      // position: "absolute",
-                      // bottom: 1,
-                      // left: 0,
-                      // bg: "blue.400",
-                      // zIndex: -1,
                       border: "4px",
                       borderBottomColor: "blue.400",
                     }}

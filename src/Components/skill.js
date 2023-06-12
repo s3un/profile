@@ -18,48 +18,7 @@ import { InViewWrapper, scaleInVariant } from "../motions";
 import bulletTextVariant from "../motions/bulletTextMotion";
 
 export default function SkillSet() {
-  //   const [progressValue, setProgressValue] = useState({
-  //     progressBar1: 0,
-  //     progressBar2: 0,
-  //     progressBar3: 0,
-  //     progressBar4: 0,
-  //     progressBar5: 0,
-  //     progressBar6: 0,
-  //     progressBar7: 0
-  //   });
-
-  //  useEffect (() => {
-  //     const handleScroll = () => {
-  //       const scrollPosition = window.scrollY;
-  //       const windowHeight = window.innerHeight;
-  //       const documentHeight = document.documentElement.scrollHeight;
-
-  //       const scrollPercentage = (scrollPosition / (documentHeight - windowHeight)) * 90;
-  //       const scrollPercentage1 = (scrollPosition / (documentHeight - windowHeight)) * 100;
-  //       const scrollPercentage2 = (scrollPosition / (documentHeight - windowHeight)) * 90;
-  //       const scrollPercentage3 = (scrollPosition / (documentHeight - windowHeight)) * 50;
-  //       const scrollPercentage4 = (scrollPosition / (documentHeight - windowHeight)) * 90;
-  //       const scrollPercentage5 = (scrollPosition / (documentHeight - windowHeight)) * 70;
-  //       const scrollPercentage6 = (scrollPosition / (documentHeight - windowHeight)) * 90;
-  //       setProgressValue({
-  //         progressBar: scrollPercentage,
-  //         progressBar2: scrollPercentage1,
-  //         progressBar3: scrollPercentage2,
-  //         progressBar4: scrollPercentage3,
-  //         progressBar5: scrollPercentage4,
-  //         progressBar6: scrollPercentage5,
-  //         progressBar7: scrollPercentage6,
-
-  //       })
-  //     };
-
-  //     window.addEventListener("scroll", handleScroll);
-
-  //     return () => {
-  //       window.removeEventListener("scroll", handleScroll);
-  //     };
-
-  //  }, []);
+  const isLargeScreen = useBreakpointValue({ base: false, lg : true})
 
   return (
     <>
@@ -69,7 +28,7 @@ export default function SkillSet() {
             <Center>
               <InViewWrapper variant={scaleInVariant(0.3, 1.5)}>
                 <Box position={"relative"}>
-                  <h1 className="newHeader">Specialities</h1>
+                {isLargeScreen && <h1 className="newHeader">Specialities</h1> }
                   <Heading
                     // as={'span'}
                     position={"absolute"}

@@ -15,9 +15,8 @@ import {
   Input,
   Textarea,
   Button,
-  IconButton,
-  useColorModeValue,
   Spacer,
+  useBreakpointValue,
 } from "@chakra-ui/react";
 
 import { BsPerson, BsGithub } from "react-icons/bs";
@@ -26,44 +25,38 @@ import { MdOutlineEmail, MdLocationOn, MdEmail, MdPhone } from "react-icons/md";
 
 import { InViewWrapper, scaleInVariant } from "../motions";
 
-export default function myContact() {
+export default function MyContact() {
   // const { hasCopied, onCopy } = useClipboard('example@example.com');
+
+  const isLargeScreen = useBreakpointValue({ base: false, lg: true });
   return (
     <Flex mt={"60px"}>
       <Container maxW={{ lg: "container.lg" }}>
-      <InViewWrapper variant={scaleInVariant(0.3, 1.5)}> 
-      <Heading fontSize={{ base: "2xl", md: "3xl", lg: "4xl" }}>
-          <Center>
-            <Box position={"relative"}>
-              <h1 className="newHeader">Contact</h1>
-              <Heading
-                // as={'span'}
-                position={"absolute"}
-                top={0}
-                h={"100%"}
-                w={"100%"}
-                display={"flex"}
-                justifyContent={"center"}
-                alignItems={"center"}
-                _after={{
-                  // content: "''",
-                  // width: "full",
-                  // height: useBreakpointValue({ base: "20%", md: "30%" }),
-                  // position: "absolute",
-                  // bottom: 1,
-                  // left: 0,
-                  // bg: "blue.400",
-                  // zIndex: -1,
-                  borderBottom: "4px",
-                  borderBottomColor: "blue.400",
-                }}
-              >
-                Get In touch
-              </Heading>
-            </Box>
-          </Center>
-        </Heading>
-      </InViewWrapper>
+        <InViewWrapper variant={scaleInVariant(0.3, 1.5)}>
+          <Heading fontSize={{ base: "2xl", md: "3xl", lg: "4xl" }}>
+            <Center>
+              <Box position={"relative"}>
+                {isLargeScreen && <h1 className="newHeader">Contact</h1>}
+                <Heading
+                  // as={'span'}
+                  position={"absolute"}
+                  top={0}
+                  h={"100%"}
+                  w={"100%"}
+                  display={"flex"}
+                  justifyContent={"center"}
+                  alignItems={"center"}
+                  _after={{
+                    borderBottom: "4px",
+                    borderBottomColor: "blue.400",
+                  }}
+                >
+                  Get In touch
+                </Heading>
+              </Box>
+            </Center>
+          </Heading>
+        </InViewWrapper>
 
         <Stack
           // spacing={"10px"}
@@ -104,24 +97,21 @@ export default function myContact() {
 
           <VStack spacing={"5"}>
             <Box w={400}>
-              <FormControl
-                mb={5}>
+              <FormControl mb={5}>
                 <InputGroup>
                   <InputLeftElement children={<BsPerson />} />
                   <Input type="text" name="name" placeholder="Your Name" />
                 </InputGroup>
               </FormControl>
 
-              <FormControl
-                mb={5}>
+              <FormControl mb={5}>
                 <InputGroup>
                   <InputLeftElement children={<MdOutlineEmail />} />
                   <Input type="email" name="email" placeholder="Your Email" />
                 </InputGroup>
               </FormControl>
 
-              <FormControl
-                mb={5}>
+              <FormControl mb={5}>
                 <Textarea
                   name="message"
                   placeholder="Your Message"

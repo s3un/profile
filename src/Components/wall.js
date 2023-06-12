@@ -13,6 +13,7 @@ import {
   Avatar,
   AvatarGroup,
   Tooltip,
+  useBreakpointValue,
 } from "@chakra-ui/react";
 import React from "react";
 import Typed from "typed.js";
@@ -40,7 +41,10 @@ export default function Wall() {
     };
   }, []);
 
+  const isLargeScreen = useBreakpointValue({ base: false, lg : true})
+
   return (
+    
     <>
       <Box direction={{ base: "column", md: "row" }}>
         <Flex
@@ -175,31 +179,31 @@ export default function Wall() {
           <Spacer />
           <Stack>
             <AvatarGroup size="lg">
-              <InViewWrapper
+            {isLargeScreen && <InViewWrapper
                 className="tooltiptext"
                 variant={itemVariants(0.1, -30, 1)}
               >
                 <span>
                   5+ <br /> years experience{" "}
                 </span>
-              </InViewWrapper>
+              </InViewWrapper> }
               <InViewWrapper
                 animate={["visible", "springMovementYAxis"]}
                 variant={BulletTextVariant(0.3, 0, 30, 0.7)}
               >
-                <Avatar boxShadow="dark-lg" h={600} w={250} src={ImageSe} />
+               {isLargeScreen && <Avatar boxShadow="dark-lg" h={600} w={250} src={ImageSe} /> }
               </InViewWrapper>
               <InViewWrapper
                 animate={["visible", "springMovementYAxis"]}
                 variant={BulletTextVariant(0.7, 0, 30, 0.7)}
               >
-                <Avatar boxShadow="dark-lg" h={500} w={150} src={ImageSe} />
+                {isLargeScreen && <Avatar boxShadow="dark-lg" h={500} w={150} src={ImageSe} /> }
               </InViewWrapper>
               <InViewWrapper
                 animate={["visible", "springMovementYAxis"]}
                 variant={BulletTextVariant(1.1, 0, 30, 0.7)}
               >
-                <Avatar boxShadow="dark-lg" h={400} w={100} src={ImageSe} />
+               {isLargeScreen && <Avatar boxShadow="dark-lg" h={400} w={100} src={ImageSe} /> }
               </InViewWrapper>
             </AvatarGroup>
           </Stack>

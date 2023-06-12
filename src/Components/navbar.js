@@ -79,8 +79,15 @@ export default function Navbar() {
             src={Logo} 
             boxSize={90}/>
         </Text>
-        <Button variant="ghost" mx={2}>
+        <Button 
+          as={Link} 
+          variant="ghost" 
+          mx={2}
+          href='#aboutme'>
           About
+        </Button>
+        <Button variant="ghost" mx={2}>
+          Resume
         </Button>
         <Button variant="ghost" mx={2}>
           Services
