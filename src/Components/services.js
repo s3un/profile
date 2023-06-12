@@ -18,6 +18,7 @@ import {
 
 import ImageSe from "../img/me.PNG";
 import DomainC from '../img/dm.png'
+import Resi from '../img/ResiEase.png'
 
 export default function Service() {
 
@@ -60,9 +61,11 @@ export default function Service() {
               </Box>
 
               <Box>
-                <Box className="newClass">
-                  <Text>Hellow world</Text>
-                </Box>
+                <Card maxW='sm'>
+                  <CardBody>
+                      <Image src={Resi} />
+                  </CardBody>
+                </Card>
               </Box>
             </HStack>
           </Stack>
