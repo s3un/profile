@@ -24,12 +24,15 @@ import { BsPerson, BsGithub } from "react-icons/bs";
 
 import { MdOutlineEmail, MdLocationOn, MdEmail, MdPhone } from "react-icons/md";
 
+import { InViewWrapper, scaleInVariant } from "../motions";
+
 export default function myContact() {
   // const { hasCopied, onCopy } = useClipboard('example@example.com');
   return (
     <Flex mt={"60px"}>
       <Container maxW={{ lg: "container.lg" }}>
-        <Heading fontSize={{ base: "2xl", md: "3xl", lg: "4xl" }}>
+      <InViewWrapper variant={scaleInVariant(0.3, 1.5)}> 
+      <Heading fontSize={{ base: "2xl", md: "3xl", lg: "4xl" }}>
           <Center>
             <Box position={"relative"}>
               <h1 className="newHeader">Contact</h1>
@@ -60,6 +63,7 @@ export default function myContact() {
             </Box>
           </Center>
         </Heading>
+      </InViewWrapper>
 
         <Stack
           // spacing={"10px"}
