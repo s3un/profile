@@ -20,6 +20,7 @@ import { VisuallyHidden, VisuallyHiddenInput } from '@chakra-ui/react'
 
 export default function About() {
   const isLargeScreen = useBreakpointValue({ base: false, lg : true})
+  const isSmallScreen = useBreakpointValue({base: true, lg: false})
 
   return (
     <Flex >
@@ -30,7 +31,7 @@ export default function About() {
               <InViewWrapper variant={scaleInVariant(0.3, 1.5)}>
                 <Box position={"relative"}>
                 {isLargeScreen &&<Text className="newHeader" id="aboutme">About me</Text> }
-                  <Heading
+                {isLargeScreen && <Heading
                     // as={'span'}
                     position={"absolute"}
                     top={0}
@@ -53,7 +54,30 @@ export default function About() {
                     }}
                   >
                     Know me More
-                  </Heading>
+                  </Heading>}
+                  {isSmallScreen &&  <Heading
+                    // as={'span'}
+                    top={0}
+                    h={"100%"}
+                    w={"100%"}
+                    display={"flex"}
+                    justifyContent={"center"}
+                    alignItems={"center"}
+                    _after={{
+                      // content: "''",
+                      // width: "full",
+                      // height: useBreakpointValue({ base: "20%", md: "30%" }),
+                      // position: "absolute",
+                      // bottom: 1,
+                      // left: 0,
+                      // bg: "blue.400",
+                      // zIndex: -1,
+                      borderBottom: "4px",
+                      borderBottomColor: "blue.400",
+                    }}
+                  >
+                    Know me More
+                  </Heading> }
                 </Box>
               </InViewWrapper>
             </Center>

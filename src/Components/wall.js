@@ -105,7 +105,7 @@ export default function Wall() {
                 </Button>
               </InViewWrapper>
               <InViewWrapper variant={BulletTextVariant(1.7, 0, 30)}>
-                <Button
+              {isLargeScreen && <Button
                   size="lg"
                   className="buttonSet"
                   bg={"whiteAlpha.300"}
@@ -122,7 +122,7 @@ export default function Wall() {
                   }}
                 >
                   View my Blog
-                </Button>
+                </Button>}
               </InViewWrapper>
             </Stack>
 

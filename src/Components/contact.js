@@ -29,6 +29,7 @@ export default function MyContact() {
   // const { hasCopied, onCopy } = useClipboard('example@example.com');
 
   const isLargeScreen = useBreakpointValue({ base: false, lg: true });
+  const isSmallScreen = useBreakpointValue({base: true, lg: false})
   return (
     <Flex mt={"60px"}>
       <Container maxW={{ lg: "container.lg" }}>
@@ -37,7 +38,7 @@ export default function MyContact() {
             <Center>
               <Box position={"relative"}>
                 {isLargeScreen && <h1 className="newHeader">Contact</h1>}
-                <Heading
+                {isLargeScreen && <Heading
                   // as={'span'}
                   position={"absolute"}
                   top={0}
@@ -52,7 +53,23 @@ export default function MyContact() {
                   }}
                 >
                   Get In touch
-                </Heading>
+                </Heading>}
+
+                {isSmallScreen && <Heading
+                  // as={'span'}
+                  top={0}
+                  h={"100%"}
+                  w={"100%"}
+                  display={"flex"}
+                  justifyContent={"center"}
+                  alignItems={"center"}
+                  _after={{
+                    borderBottom: "4px",
+                    borderBottomColor: "blue.400",
+                  }}
+                >
+                  Get In touch
+                </Heading>}
               </Box>
             </Center>
           </Heading>
