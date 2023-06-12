@@ -12,9 +12,12 @@ import {
   HStack,
   Text,
   background,
+  Image,
+  CardBody,
 } from "@chakra-ui/react";
 
 import ImageSe from "../img/me.PNG";
+import DomainC from '../img/dm.png'
 
 export default function Service() {
 
@@ -48,16 +51,12 @@ export default function Service() {
 
           <Stack spacing={4} justify="center" align="center">
             <HStack>
-              <Box
-                // bg="url('webapp/src/img/me.PNG')"
-                // backgroundSize="cover"
-                // backgroundPosition="center"
-                // width={"100%"}
-                // height={"300px"}
-              >
-                <Box sx={boxStyling}>
-                  <Text>Hellow world</Text>
-                </Box>
+              <Box>
+                <Card maxW='sm'>
+                  <CardBody>
+                      <Image src={DomainC} />
+                  </CardBody>
+                </Card>
               </Box>
 
               <Box>
