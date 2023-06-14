@@ -83,7 +83,7 @@ export default function Navbar() {
           as={Link} 
           variant="ghost" 
           mx={2}
-          href='#aboutme'>
+          >
           About
         </Button>
         <Button variant="ghost" mx={2}>

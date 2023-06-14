@@ -22,6 +22,7 @@ import { CheckIcon } from "@chakra-ui/icons";
 import { MdCheckCircle } from "react-icons/md";
 import { InViewWrapper, itemVariants, scaleInVariant } from "../motions";
 import bulletTextVariant from "../motions/bulletTextMotion";
+import { IoIosLink } from 'react-icons/io'
 
 export default function Resume() {
   const isLargeScreen = useBreakpointValue({ base: false, lg : true})
@@ -66,6 +67,7 @@ export default function Resume() {
                     fontSize={20}
                     color={"black"}
                     pb={19}
+
                   >
                     My Experience
                   </Text>
@@ -85,23 +87,25 @@ export default function Resume() {
                       <Text className="secondText" fontSize={23}>
                         Application/Cloud Security Engineer
                       </Text>
+                      <HStack>
                       <Text
                         className="secondText"
                         as={Link}
                         fontSize={15}
-                        href={"#"}
+                        href={"https://seamlesshr.com/"}
                       >
                         SeamlessHR
                       </Text>
+                      <IoIosLink />
+                      </HStack>
                       <List spacing={2}>
-                        <ListItem>
+                      <ListItem>
                           <ListIcon
                             className="secondText"
                             as={MdCheckCircle}
                             color="blue.400"
                           />
-                          Performing (composition analysis, SAST, DAST, and
-                          IAST) on web/mobile applications.
+                          Conduct Static and Dynamic Application security testing on web/mobile applications
                         </ListItem>
 
                         <ListItem>
@@ -110,9 +114,8 @@ export default function Resume() {
                             as={MdCheckCircle}
                             color="blue.400"
                           />
-                          Responding to security incidents and carrying out
-                          threat-hunting activity in the cloud environment (AWS
-                          GuardDuty, Amazon Macie, etc).
+                          Developed cloud security architeture for easy detection of threats and enchancing incident
+                          reponse process within the cloud infrastructure 
                         </ListItem>
 
                         <ListItem>
@@ -121,8 +124,17 @@ export default function Resume() {
                             as={MdCheckCircle}
                             color="blue.400"
                           />
-                          Automated pipeline (Sonar cloud) and manual source
-                          code review.
+                          Work as part of the Cloud Dev infrastructure team to design and help implment appropriate business
+                          security measures on the new Cloud environment. 
+                        </ListItem>
+
+                        <ListItem>
+                          <ListIcon
+                            className="secondText"
+                            as={MdCheckCircle}
+                            color="blue.400"
+                          />
+                          Conduct Cloud security assessment from both external and internal perspective.
                         </ListItem>
                       </List>
                     </Box>
@@ -143,14 +155,17 @@ export default function Resume() {
                       <Text className="secondText" fontSize={23}>
                         Threat Detection Engineer
                       </Text>
+                      <HStack>
                       <Text
                         className="secondText"
                         as={Link}
                         fontSize={15}
-                        href={"#"}
+                        href={"https://wazuh.com/"}
                       >
                         Wazuh
                       </Text>
+                      <IoIosLink />
+                      </HStack>
                       <List spacing={2}>
                         <ListItem>
                           <ListIcon
@@ -188,14 +203,17 @@ export default function Resume() {
                       <Text className="secondText" fontSize={23}>
                         Senior Threat Intelligence Analyst
                       </Text>
+                      <HStack>
                       <Text
                         className="secondText"
                         as={Link}
                         fontSize={15}
-                        href={"#"}
+                        href={"https://www.accessbankplc.com/"}
                       >
-                        Access Bank Plc.
+                        Access Bank Plc
                       </Text>
+                      <IoIosLink />
+                      </HStack>
                       <List spacing={2}>
                         <ListItem>
                           <ListIcon
@@ -213,9 +231,9 @@ export default function Resume() {
                             as={MdCheckCircle}
                             color="blue.400"
                           />
-                          Used a number of tools and systems (automated and
-                          manual) to discover threats, MDATP, Carbon Black, and
-                          ArcSight.
+                         
+Experience in analyzing malware / hacking tools and threat actor tactics, techniques, and procedures to characterize 
+threat actors’ technical methods for accomplishing their missions
                         </ListItem>
 
                         <ListItem>
@@ -245,14 +263,17 @@ export default function Resume() {
                       <Text className="secondText" fontSize={23}>
                         Threat Intelligence Analyst
                       </Text>
+                      <HStack>
                       <Text
                         className="secondText"
                         as={Link}
                         fontSize={15}
-                        href={"#"}
+                        href={"https://cybersocafrica.com/"}
                       >
                         CyberSOC Africa
                       </Text>
+                      <IoIosLink />
+                      </HStack>
                       <List spacing={2}>
                         <ListItem>
                           <ListIcon
@@ -272,13 +293,15 @@ export default function Resume() {
                           Vulnerability assessment on client web application
                         </ListItem>
 
+
                         <ListItem>
                           <ListIcon
                             className="secondText"
                             as={MdCheckCircle}
                             color="blue.400"
                           />
-                          Dark web monitoring and investigation
+                         Analyst develops, documents, and presents general and technical presentations on security
+                          threats to business units and Information Security Risk Management personnel
                         </ListItem>
 
                         <ListItem>
@@ -287,25 +310,7 @@ export default function Resume() {
                             as={MdCheckCircle}
                             color="blue.400"
                           />
-                          Open-source intelligence gathering on cybercrime cases
-                        </ListItem>
-
-                        <ListItem>
-                          <ListIcon
-                            className="secondText"
-                            as={MdCheckCircle}
-                            color="blue.400"
-                          />
-                          Network threat-hunting
-                        </ListItem>
-
-                        <ListItem>
-                          <ListIcon
-                            className="secondText"
-                            as={MdCheckCircle}
-                            color="blue.400"
-                          />
-                          Threat actor research, investigation, and reporting
+                          Research, analyze, and provide reports on attacker campaigns as required
                         </ListItem>
                       </List>
                     </Box>

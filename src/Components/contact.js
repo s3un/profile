@@ -26,8 +26,6 @@ import { MdOutlineEmail, MdLocationOn, MdEmail, MdPhone } from "react-icons/md";
 import { InViewWrapper, scaleInVariant } from "../motions";
 
 export default function MyContact() {
-  // const { hasCopied, onCopy } = useClipboard('example@example.com');
-
   const isLargeScreen = useBreakpointValue({ base: false, lg: true });
   const isSmallScreen = useBreakpointValue({base: true, lg: false})
   return (

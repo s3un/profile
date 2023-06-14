@@ -14,15 +14,20 @@ import {
   AvatarGroup,
   Tooltip,
   useBreakpointValue,
+  TagLeftIcon,
 } from "@chakra-ui/react";
 import React from "react";
 import Typed from "typed.js";
 import ImageSe from "../img/me.PNG";
+import OS from "../img/os.jpg";
+import OSS from "../img/os1.jpg";
+import OSSs from "../img/os2.jpg";
 
 import { BsGithub, BsLinkedin, BsInstagram, BsTwitter } from "react-icons/bs";
 import { GrNotes } from "react-icons/gr";
 import InViewWrapper from "../motions/inViewWrapper";
 import { BulletTextVariant, itemVariants } from "../motions";
+import { FcInternal } from "react-icons/fc";
 
 export default function Wall() {
   const el = React.useRef(null);
@@ -41,10 +46,9 @@ export default function Wall() {
     };
   }, []);
 
-  const isLargeScreen = useBreakpointValue({ base: false, lg : true})
+  const isLargeScreen = useBreakpointValue({ base: false, lg: true });
 
   return (
-    
     <>
       <Box direction={{ base: "column", md: "row" }}>
         <Flex
@@ -53,20 +57,20 @@ export default function Wall() {
           mt={{ base: "20", lg: "50" }}
           mr={{ md: "10", lg: "150" }}
         >
-          <Stack spacing={2} w={"full"} maxW={"x2"}>
+          <Stack spacing={10} w={"full"} maxW={"x2"}>
             <InViewWrapper variant={itemVariants(0.3, -200, 1)}>
               <Box>
                 <Text fontSize={25} className="secondText">
                   Welcome to my world
                 </Text>
                 <Heading fontSize={{ base: "3xl", md: "4xl", lg: "5xl" }}>
-                  Hi, {""}
+                  Hi, I'm {""}
                   <Text
                     as={"span"}
                     bgGradient="linear(to-r, blue.500, blue.500)"
                     bgClip={"text"}
                   >
-                    <span>Oluwaseun Oyebowale</span>
+                    <span>Oluwaseun Oyebowale </span>
                   </Text>
                   <br />
                   <Text as={"span"} className="boldTest" ref={el}></Text>
@@ -77,7 +81,7 @@ export default function Wall() {
 
               <Box>
                 <Text fontSize={30} className="secondText">
-                  Currently, work at SeamlessHR, <br /> Nigeria
+                  Currently, work at SeamlessHR, <br /> Nigeria, as Application/Cloud Security Engineer.
                 </Text>
               </Box>
             </InViewWrapper>
@@ -86,6 +90,8 @@ export default function Wall() {
               <InViewWrapper variant={BulletTextVariant(1.3, 0, 30)}>
                 <Button
                   size="lg"
+                  height="65px"
+                  width="250px"
                   className="buttonSet"
                   bg={"blue.400"}
                   rounded={"full"}
@@ -99,30 +105,34 @@ export default function Wall() {
                   _focus={{
                     bg: "blue.500",
                   }}
-                  leftIcon={<GrNotes />}
+                  leftIcon={<FcInternal />}
                 >
                   Download my CV
                 </Button>
               </InViewWrapper>
               <InViewWrapper variant={BulletTextVariant(1.7, 0, 30)}>
-              {isLargeScreen && <Button
-                  size="lg"
-                  className="buttonSet"
-                  bg={"whiteAlpha.300"}
-                  rounded={"full"}
-                  color={"blue.400"}
-                  boxShadow={
-                    "0px 1px 25px -5px rgb(66 153 225 / 48%), 0 10px 10px -5px rgb(66 153 225 / 43%)"
-                  }
-                  _hover={{
-                    bg: "blue.500",
-                  }}
-                  _focus={{
-                    bg: "blue.500",
-                  }}
-                >
-                  View my Blog
-                </Button>}
+                {isLargeScreen && (
+                  <Button
+                    size="lg"
+                    height="65px"
+                    width="250px"
+                    className="buttonSet"
+                    bg={"whiteAlpha.300"}
+                    rounded={"full"}
+                    color={"blue.400"}
+                    boxShadow={
+                      "0px 1px 25px -5px rgb(66 153 225 / 48%), 0 10px 10px -5px rgb(66 153 225 / 43%)"
+                    }
+                    _hover={{
+                      bg: "blue.500",
+                    }}
+                    _focus={{
+                      bg: "blue.500",
+                    }}
+                  >
+                    View my Blog
+                  </Button>
+                )}
               </InViewWrapper>
             </Stack>
 
@@ -179,31 +189,55 @@ export default function Wall() {
           <Spacer />
           <Stack>
             <AvatarGroup size="lg">
-            {isLargeScreen && <InViewWrapper
-                className="tooltiptext"
-                variant={itemVariants(0.1, -30, 1)}
-              >
-                <span>
-                  5+ <br /> years experience{" "}
-                </span>
-              </InViewWrapper> }
+              {isLargeScreen && (
+                <InViewWrapper
+                  className="tooltiptext"
+                  variant={itemVariants(0.1, -30, 1)}
+                >
+                  <span>
+                    5+ <br /> years experience{" "}
+                  </span>
+                </InViewWrapper>
+              )}
               <InViewWrapper
                 animate={["visible", "springMovementYAxis"]}
                 variant={BulletTextVariant(0.3, 0, 30, 0.7)}
               >
-               {isLargeScreen && <Avatar boxShadow="dark-lg" h={600} w={250} src={ImageSe} /> }
+                {isLargeScreen && (
+                  <Avatar
+                    boxShadow="dark-lg"
+                    h={600}
+                    w={250}
+                    src={OS}
+                  />
+                )}
               </InViewWrapper>
               <InViewWrapper
                 animate={["visible", "springMovementYAxis"]}
                 variant={BulletTextVariant(0.7, 0, 30, 0.7)}
               >
-                {isLargeScreen && <Avatar boxShadow="dark-lg" h={500} w={150} src={ImageSe} /> }
+                {isLargeScreen && (
+                  <Avatar
+                    boxShadow="dark-lg"
+                    h={500}
+                    w={150}
+                    src={OSS}
+                  />
+                )}
               </InViewWrapper>
               <InViewWrapper
                 animate={["visible", "springMovementYAxis"]}
                 variant={BulletTextVariant(1.1, 0, 30, 0.7)}
               >
-               {isLargeScreen && <Avatar boxShadow="dark-lg" h={400} w={100} src={ImageSe} /> }
+                {isLargeScreen && (
+                  <Avatar
+                
+                    boxShadow="dark-lg"
+                    h={400}
+                    w={100}
+                    src={OSSs}
+                  />
+                )}
               </InViewWrapper>
             </AvatarGroup>
           </Stack>

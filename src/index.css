@@ -60,3 +60,9 @@
   text-align: center;
 
 }
+
+.aboutClass {
+  font-size: 40px;
+  font-weight: 700;
+  color: #3182CE;
+}

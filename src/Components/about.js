@@ -15,6 +15,7 @@ import {
 
 import { InViewWrapper, itemVariants, scaleInVariant } from "../motions";
 import bulletTextVariant from "../motions/bulletTextMotion";
+import { FcInternal } from "react-icons/fc";
 
 import { VisuallyHidden, VisuallyHiddenInput } from '@chakra-ui/react'
 
@@ -30,7 +31,7 @@ export default function About() {
             <Center>
               <InViewWrapper variant={scaleInVariant(0.3, 1.5)}>
                 <Box position={"relative"}>
-                {isLargeScreen &&<Text className="newHeader" id="aboutme">About me</Text> }
+                {isLargeScreen &&<Text className="newHeader">About me</Text> }
                 {isLargeScreen && <Heading
                     // as={'span'}
                     position={"absolute"}
@@ -84,32 +85,32 @@ export default function About() {
           </Heading>
           <Stack spacing={10} align="" direction={["column", "row"]} mt={"50"}>
             <Box>
-              <InViewWrapper variant={itemVariants(0.3, -30)}>
+              {/* <InViewWrapper variant={itemVariants(0.3, -30)}>
                 <Heading fontSize={"30px"} className="secondHeader">
-                  {/* I'm {""}
+                  I'm {""}
                   <Text
                     as={"span"}
                     bgGradient="linear(to-r, blue.500, blue.500)"
                     bgClip={"text"}
                   >
                     <span>Oluwaseun Muiz Oyebowale, </span>
-                  </Text> */}
+                  </Text>
                   A cyber security Engineer.
                 </Heading>
-              </InViewWrapper>
+              </InViewWrapper> */}
 
               <InViewWrapper variant={itemVariants(0.5, -30)}>
                 <Text pt={"15px"} className="secondText">
-                  Cyber Security Engineer with a wide skill set in different IT
-                  domains, Cloud enthusiast with strong development skills on
-                  AWS services. I also keep learning
+                Experienced Application/Cloud Security Engineer with a strong background in Information System Security and over
+                  <span
+                    className="aboutClass"> 5 </span> years of IT experience. Proficient in security engineering and Threat Intelligence, with expertise in Cloud, vulnerability scanning, Software development, and Malware analysis. 
                 </Text>
 
                 <Text className="secondText">
-                  new technologies have wide knowledge in software, IT
-                  infrastructure, cloud, and DevOps, to keep the IT
-                  infrastructure and different technologies secure.
+                 <br /> Continuously expanding knowledge in software, IT infrastructure, cloud, and DevOps to ensure comprehensive security across diverse technologies. A highly organized team player adept at managing project milestones and delivering successful outcomes
+
                 </Text>
+        
               </InViewWrapper>
 
               <Divider mt={3} />
@@ -155,6 +156,7 @@ export default function About() {
                   _focus={{
                     bg: "blue.500",
                   }}
+                  leftIcon={<FcInternal />}
                 >
                   Download my CV
                 </Button>
