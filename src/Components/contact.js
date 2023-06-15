@@ -2,14 +2,12 @@ import {
   Box,
   Container,
   Flex,
-  HStack,
   Stack,
   Heading,
   Text,
   Center,
   VStack,
   InputGroup,
-  FormLabel,
   InputLeftElement,
   FormControl,
   Input,
@@ -19,15 +17,15 @@ import {
   useBreakpointValue,
 } from "@chakra-ui/react";
 
-import { BsPerson, BsGithub } from "react-icons/bs";
+import { BsPerson } from "react-icons/bs";
 
-import { MdOutlineEmail, MdLocationOn, MdEmail, MdPhone } from "react-icons/md";
+import { MdOutlineEmail } from "react-icons/md";
 
 import { InViewWrapper, scaleInVariant } from "../motions";
 
 export default function MyContact() {
   const isLargeScreen = useBreakpointValue({ base: false, lg: true });
-  const isSmallScreen = useBreakpointValue({base: true, lg: false})
+  const isSmallScreen = useBreakpointValue({ base: true, lg: false });
   return (
     <Flex mt={"60px"}>
       <Container maxW={{ lg: "container.lg" }}>
@@ -36,38 +34,42 @@ export default function MyContact() {
             <Center>
               <Box position={"relative"}>
                 {isLargeScreen && <h1 className="newHeader">Contact</h1>}
-                {isLargeScreen && <Heading
-                  // as={'span'}
-                  position={"absolute"}
-                  top={0}
-                  h={"100%"}
-                  w={"100%"}
-                  display={"flex"}
-                  justifyContent={"center"}
-                  alignItems={"center"}
-                  _after={{
-                    borderBottom: "4px",
-                    borderBottomColor: "blue.400",
-                  }}
-                >
-                  Get In touch
-                </Heading>}
+                {isLargeScreen && (
+                  <Heading
+                    // as={'span'}
+                    position={"absolute"}
+                    top={0}
+                    h={"100%"}
+                    w={"100%"}
+                    display={"flex"}
+                    justifyContent={"center"}
+                    alignItems={"center"}
+                    _after={{
+                      borderBottom: "4px",
+                      borderBottomColor: "blue.400",
+                    }}
+                  >
+                    Get In touch
+                  </Heading>
+                )}
 
-                {isSmallScreen && <Heading
-                  // as={'span'}
-                  top={0}
-                  h={"100%"}
-                  w={"100%"}
-                  display={"flex"}
-                  justifyContent={"center"}
-                  alignItems={"center"}
-                  _after={{
-                    borderBottom: "4px",
-                    borderBottomColor: "blue.400",
-                  }}
-                >
-                  Get In touch
-                </Heading>}
+                {isSmallScreen && (
+                  <Heading
+                    // as={'span'}
+                    top={0}
+                    h={"100%"}
+                    w={"100%"}
+                    display={"flex"}
+                    justifyContent={"center"}
+                    alignItems={"center"}
+                    _after={{
+                      borderBottom: "4px",
+                      borderBottomColor: "blue.400",
+                    }}
+                  >
+                    Get In touch
+                  </Heading>
+                )}
               </Box>
             </Center>
           </Heading>

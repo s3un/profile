@@ -9,22 +9,17 @@ import {
   IconButton,
   HStack,
   Box,
-  Image,
   Avatar,
   AvatarGroup,
-  Tooltip,
   useBreakpointValue,
-  TagLeftIcon,
 } from "@chakra-ui/react";
 import React from "react";
 import Typed from "typed.js";
-import ImageSe from "../img/me.PNG";
 import OS from "../img/os.jpg";
 import OSS from "../img/os1.jpg";
 import OSSs from "../img/os2.jpg";
 
 import { BsGithub, BsLinkedin, BsInstagram, BsTwitter } from "react-icons/bs";
-import { GrNotes } from "react-icons/gr";
 import InViewWrapper from "../motions/inViewWrapper";
 import { BulletTextVariant, itemVariants } from "../motions";
 import { FcInternal } from "react-icons/fc";

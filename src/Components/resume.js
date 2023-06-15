@@ -9,7 +9,6 @@ import {
   HStack,
   Spacer,
   Center,
-  SimpleGrid,
   List,
   ListItem,
   ListIcon,
@@ -17,8 +16,7 @@ import {
   Badge,
   useBreakpointValue,
 } from "@chakra-ui/react";
-// import { BsJustify } from 'react-icons/bs'
-import { CheckIcon } from "@chakra-ui/icons";
+
 import { MdCheckCircle } from "react-icons/md";
 import { InViewWrapper, itemVariants, scaleInVariant } from "../motions";
 import bulletTextVariant from "../motions/bulletTextMotion";

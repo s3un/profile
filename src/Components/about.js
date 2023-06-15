@@ -17,68 +17,71 @@ import { InViewWrapper, itemVariants, scaleInVariant } from "../motions";
 import bulletTextVariant from "../motions/bulletTextMotion";
 import { FcInternal } from "react-icons/fc";
 
-import { VisuallyHidden, VisuallyHiddenInput } from '@chakra-ui/react'
 
 export default function About() {
-  const isLargeScreen = useBreakpointValue({ base: false, lg : true})
-  const isSmallScreen = useBreakpointValue({base: true, lg: false})
+  const isLargeScreen = useBreakpointValue({ base: false, lg: true });
+  const isSmallScreen = useBreakpointValue({ base: true, lg: false });
 
   return (
-    <Flex >
+    <Flex>
       <Container maxW={{ base: "full", lg: "container.xl" }} mt={10}>
-        <Box> 
+        <Box>
           <Heading fontSize={{ base: "2xl", md: "3xl", lg: "4xl" }}>
             <Center>
               <InViewWrapper variant={scaleInVariant(0.3, 1.5)}>
                 <Box position={"relative"}>
-                {isLargeScreen &&<Text className="newHeader">About me</Text> }
-                {isLargeScreen && <Heading
-                    // as={'span'}
-                    position={"absolute"}
-                    top={0}
-                    h={"100%"}
-                    w={"100%"}
-                    display={"flex"}
-                    justifyContent={"center"}
-                    alignItems={"center"}
-                    _after={{
-                      // content: "''",
-                      // width: "full",
-                      // height: useBreakpointValue({ base: "20%", md: "30%" }),
-                      // position: "absolute",
-                      // bottom: 1,
-                      // left: 0,
-                      // bg: "blue.400",
-                      // zIndex: -1,
-                      borderBottom: "4px",
-                      borderBottomColor: "blue.400",
-                    }}
-                  >
-                    Know me More
-                  </Heading>}
-                  {isSmallScreen &&  <Heading
-                    // as={'span'}
-                    top={0}
-                    h={"100%"}
-                    w={"100%"}
-                    display={"flex"}
-                    justifyContent={"center"}
-                    alignItems={"center"}
-                    _after={{
-                      // content: "''",
-                      // width: "full",
-                      // height: useBreakpointValue({ base: "20%", md: "30%" }),
-                      // position: "absolute",
-                      // bottom: 1,
-                      // left: 0,
-                      // bg: "blue.400",
-                      // zIndex: -1,
-                      borderBottom: "4px",
-                      borderBottomColor: "blue.400",
-                    }}
-                  >
-                    Know me More
-                  </Heading> }
+                  {isLargeScreen && <Text className="newHeader">About me</Text>}
+                  {isLargeScreen && (
+                    <Heading
+                      // as={'span'}
+                      position={"absolute"}
+                      top={0}
+                      h={"100%"}
+                      w={"100%"}
+                      display={"flex"}
+                      justifyContent={"center"}
+                      alignItems={"center"}
+                      _after={{
+                        // content: "''",
+                        // width: "full",
+                        // height: useBreakpointValue({ base: "20%", md: "30%" }),
+                        // position: "absolute",
+                        // bottom: 1,
+                        // left: 0,
+                        // bg: "blue.400",
+                        // zIndex: -1,
+                        borderBottom: "4px",
+                        borderBottomColor: "blue.400",
+                      }}
+                    >
+                      Know me More
+                    </Heading>
+                  )}
+                  {isSmallScreen && (
+                    <Heading
+                      // as={'span'}
+                      top={0}
+                      h={"100%"}
+                      w={"100%"}
+                      display={"flex"}
+                      justifyContent={"center"}
+                      alignItems={"center"}
+                      _after={{
+                        // content: "''",
+                        // width: "full",
+                        // height: useBreakpointValue({ base: "20%", md: "30%" }),
+                        // position: "absolute",
+                        // bottom: 1,
+                        // left: 0,
+                        // bg: "blue.400",
+                        // zIndex: -1,
+                        borderBottom: "4px",
+                        borderBottomColor: "blue.400",
+                      }}
+                    >
+                      Know me More
+                    </Heading>
+                  )}
                 </Box>
               </InViewWrapper>
             </Center>
@@ -101,16 +104,21 @@ export default function About() {
 
               <InViewWrapper variant={itemVariants(0.5, -30)}>
                 <Text pt={"15px"} className="secondText">
-                Experienced Application/Cloud Security Engineer with a strong background in Information System Security and over
-                  <span
-                    className="aboutClass"> 5 </span> years of IT experience. Proficient in security engineering and Threat Intelligence, with expertise in Cloud, vulnerability scanning, Software development, and Malware analysis. 
+                  Experienced Application/Cloud Security Engineer with a strong
+                  background in Information System Security and over
+                  <span className="aboutClass"> 5 </span> years of IT
+                  experience. Proficient in security engineering and Threat
+                  Intelligence, with expertise in Cloud, vulnerability scanning,
+                  Software development, and Malware analysis.
                 </Text>
 
                 <Text className="secondText">
-                 <br /> Continuously expanding knowledge in software, IT infrastructure, cloud, and DevOps to ensure comprehensive security across diverse technologies. A highly organized team player adept at managing project milestones and delivering successful outcomes
-
+                  <br /> Continuously expanding knowledge in software, IT
+                  infrastructure, cloud, and DevOps to ensure comprehensive
+                  security across diverse technologies. A highly organized team
+                  player adept at managing project milestones and delivering
+                  successful outcomes
                 </Text>
-        
               </InViewWrapper>
 
               <Divider mt={3} />
