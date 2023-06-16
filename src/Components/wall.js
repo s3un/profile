@@ -11,6 +11,7 @@ import {
   Box,
   Avatar,
   AvatarGroup,
+  Image,
   useBreakpointValue,
 } from "@chakra-ui/react";
 import React from "react";
@@ -19,12 +20,17 @@ import OS from "../img/os.jpg";
 import OSS from "../img/os1.jpg";
 import OSSs from "../img/os2.jpg";
 
+import Oprofile from "../img/profile.png";
+
 import { BsGithub, BsLinkedin, BsInstagram, BsTwitter } from "react-icons/bs";
 import InViewWrapper from "../motions/inViewWrapper";
 import { BulletTextVariant, itemVariants } from "../motions";
 import { FcInternal } from "react-icons/fc";
 
 export default function Wall() {
+  const openPDF = () => {
+    window.open(process.env.PUBLIC_URL + "../../public/OLUWASEUN OYEBOWAL RESUME.pdf", "_blank")
+  };
   const el = React.useRef(null);
 
   React.useEffect(() => {
@@ -91,6 +97,7 @@ export default function Wall() {
                   bg={"blue.400"}
                   rounded={"full"}
                   color={"white"}
+                  onClick={openPDF}
                   boxShadow={
                     "0px 1px 25px -5px rgb(66 153 225 / 48%), 0 10px 10px -5px rgb(66 153 225 / 43%)"
                   }
@@ -236,6 +243,7 @@ export default function Wall() {
               </InViewWrapper>
             </AvatarGroup>
           </Stack>
+
         </Flex>
       </Box>
     </>
