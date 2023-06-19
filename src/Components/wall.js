@@ -26,11 +26,9 @@ import { BsGithub, BsLinkedin, BsInstagram, BsTwitter } from "react-icons/bs";
 import InViewWrapper from "../motions/inViewWrapper";
 import { BulletTextVariant, itemVariants } from "../motions";
 import { FcInternal } from "react-icons/fc";
-
+import CVPDF from "../Resume/cv.pdf"
 export default function Wall() {
-  const openPDF = () => {
-    window.open(process.env.PUBLIC_URL + "../../public/OLUWASEUN OYEBOWAL RESUME.pdf", "_blank")
-  };
+
   const el = React.useRef(null);
 
   React.useEffect(() => {
@@ -89,6 +87,8 @@ export default function Wall() {
 
             <Stack direction={{ base: "colum", md: "row" }} spacing={4}>
               <InViewWrapper variant={BulletTextVariant(1.3, 0, 30)}>
+                <a href={CVPDF} target="_blank">
+
                 <Button
                   size="lg"
                   height="65px"
@@ -97,7 +97,7 @@ export default function Wall() {
                   bg={"blue.400"}
                   rounded={"full"}
                   color={"white"}
-                  onClick={openPDF}
+                  // onClick={openPDF}
                   boxShadow={
                     "0px 1px 25px -5px rgb(66 153 225 / 48%), 0 10px 10px -5px rgb(66 153 225 / 43%)"
                   }
@@ -111,6 +111,7 @@ export default function Wall() {
                 >
                   Download my CV
                 </Button>
+                </a>
               </InViewWrapper>
               <InViewWrapper variant={BulletTextVariant(1.7, 0, 30)}>
                 {isLargeScreen && (
