@@ -13,7 +13,6 @@ import {
 
 } from "@chakra-ui/react";
 
-import { useState, useEffect } from "react";
 import { InViewWrapper, scaleInVariant } from "../motions";
 import bulletTextVariant from "../motions/bulletTextMotion";
 

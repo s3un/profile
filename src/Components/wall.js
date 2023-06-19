@@ -11,7 +11,6 @@ import {
   Box,
   Avatar,
   AvatarGroup,
-  Image,
   useBreakpointValue,
 } from "@chakra-ui/react";
 import React from "react";
@@ -19,16 +18,14 @@ import Typed from "typed.js";
 import OS from "../img/os.jpg";
 import OSS from "../img/os1.jpg";
 import OSSs from "../img/os2.jpg";
-
-import Oprofile from "../img/profile.png";
-
-import { BsGithub, BsLinkedin, BsInstagram, BsTwitter } from "react-icons/bs";
+import { BsGithub, BsLinkedin, BsTwitter } from "react-icons/bs";
 import InViewWrapper from "../motions/inViewWrapper";
 import { BulletTextVariant, itemVariants } from "../motions";
 import { FcInternal } from "react-icons/fc";
-import CVPDF from "../Resume/cv.pdf"
-export default function Wall() {
+import CVPDF from "../Resume/cv.pdf";
 
+
+export default function Wall() {
   const el = React.useRef(null);
 
   React.useEffect(() => {
@@ -80,7 +77,8 @@ export default function Wall() {
 
               <Box>
                 <Text fontSize={30} className="secondText">
-                  Currently, work at SeamlessHR, <br /> Nigeria, as Application/Cloud Security Engineer.
+                  Currently, work at SeamlessHR, <br /> Nigeria, as
+                  Application/Cloud Security Engineer.
                 </Text>
               </Box>
             </InViewWrapper>
@@ -88,29 +86,28 @@ export default function Wall() {
             <Stack direction={{ base: "colum", md: "row" }} spacing={4}>
               <InViewWrapper variant={BulletTextVariant(1.3, 0, 30)}>
                 <a href={CVPDF} target="_blank">
-
-                <Button
-                  size="lg"
-                  height="65px"
-                  width="250px"
-                  className="buttonSet"
-                  bg={"blue.400"}
-                  rounded={"full"}
-                  color={"white"}
-                  // onClick={openPDF}
-                  boxShadow={
-                    "0px 1px 25px -5px rgb(66 153 225 / 48%), 0 10px 10px -5px rgb(66 153 225 / 43%)"
-                  }
-                  _hover={{
-                    bg: "blue.500",
-                  }}
-                  _focus={{
-                    bg: "blue.500",
-                  }}
-                  leftIcon={<FcInternal />}
-                >
-                  Download my CV
-                </Button>
+                  <Button
+                    size="lg"
+                    height="65px"
+                    width="250px"
+                    className="buttonSet"
+                    bg={"blue.400"}
+                    rounded={"full"}
+                    color={"white"}
+                    // onClick={openPDF}
+                    boxShadow={
+                      "0px 1px 25px -5px rgb(66 153 225 / 48%), 0 10px 10px -5px rgb(66 153 225 / 43%)"
+                    }
+                    _hover={{
+                      bg: "blue.500",
+                    }}
+                    _focus={{
+                      bg: "blue.500",
+                    }}
+                    rightIcon={<FcInternal />}
+                  >
+                    Download my CV
+                  </Button>
                 </a>
               </InViewWrapper>
               <InViewWrapper variant={BulletTextVariant(1.7, 0, 30)}>
@@ -207,12 +204,7 @@ export default function Wall() {
                 variant={BulletTextVariant(0.3, 0, 30, 0.7)}
               >
                 {isLargeScreen && (
-                  <Avatar
-                    boxShadow="dark-lg"
-                    h={600}
-                    w={250}
-                    src={OS}
-                  />
+                  <Avatar boxShadow="dark-lg" h={600} w={250} src={OS} />
                 )}
               </InViewWrapper>
               <InViewWrapper
@@ -220,12 +212,7 @@ export default function Wall() {
                 variant={BulletTextVariant(0.7, 0, 30, 0.7)}
               >
                 {isLargeScreen && (
-                  <Avatar
-                    boxShadow="dark-lg"
-                    h={500}
-                    w={150}
-                    src={OSS}
-                  />
+                  <Avatar boxShadow="dark-lg" h={500} w={150} src={OSS} />
                 )}
               </InViewWrapper>
               <InViewWrapper
@@ -233,18 +220,11 @@ export default function Wall() {
                 variant={BulletTextVariant(1.1, 0, 30, 0.7)}
               >
                 {isLargeScreen && (
-                  <Avatar
-                
-                    boxShadow="dark-lg"
-                    h={400}
-                    w={100}
-                    src={OSSs}
-                  />
+                  <Avatar boxShadow="dark-lg" h={400} w={100} src={OSSs} />
                 )}
               </InViewWrapper>
             </AvatarGroup>
           </Stack>
-
         </Flex>
       </Box>
     </>

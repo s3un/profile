@@ -16,6 +16,7 @@ import {
 import { InViewWrapper, itemVariants, scaleInVariant } from "../motions";
 import bulletTextVariant from "../motions/bulletTextMotion";
 import { FcInternal } from "react-icons/fc";
+import CVPDF from "../Resume/cv.pdf"
 
 
 export default function About() {
@@ -148,6 +149,7 @@ export default function About() {
                 />
               </InViewWrapper>
               <InViewWrapper variant={bulletTextVariant(0.9, 0, 30, 1)}>
+                <a href={CVPDF} target="_blank">
                 <Button
                   size="md"
                   bg={"blue.400"}
@@ -164,10 +166,11 @@ export default function About() {
                   _focus={{
                     bg: "blue.500",
                   }}
-                  leftIcon={<FcInternal />}
+                  rightIcon={<FcInternal />}
                 >
                   Download my CV
                 </Button>
+                </a>
               </InViewWrapper>
             </VStack>
           </Stack>
