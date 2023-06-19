@@ -62,13 +62,14 @@ export default function SkillSet() {
               <Box w={400}>
                 <InViewWrapper variant={bulletTextVariant(0.5, 0, 60, 1)}>
                   <Box pb={5}>
-                    <Text className="secondText">Vulnerability Managment 100%</Text>
+                    <Text className="secondText">Vulnerability Managment <span className="firstText">100%</span> </Text>
+                    {/* <Text className="secondText">100% </Text> */}
                     <Progress hasStripe size="md" value={100} />
                   </Box>
                 </InViewWrapper>
                 <InViewWrapper variant={bulletTextVariant(0.7, 0, 60, 1)}>
                   <Box pb={5}>
-                    <Text className="secondText">Malware Analysis</Text>
+                    <Text className="secondText">Malware Analysis <span className="firstTextM">90%</span></Text>
                     <Progress hasStripe value={90} />
                   </Box>
                 </InViewWrapper>
@@ -76,13 +77,14 @@ export default function SkillSet() {
                   <Box pb={5}>
                     <Text className="secondText">
                       Automated/Manual Code review
+                      <span className="firstTextA">90%</span>
                     </Text>
                     <Progress hasStripe value={90} />
                   </Box>
                 </InViewWrapper>
                 <InViewWrapper variant={bulletTextVariant(1.1, 0, 60, 1)}>
                   <Box pb={5}>
-                    <Text className="secondText">Web/Mobile/API pentest</Text>
+                    <Text className="secondText">Web/Mobile/API pentest <span className="firstTextW">90%</span></Text>
                     <Progress hasStripe value={90} />
                   </Box>
                 </InViewWrapper>
@@ -93,27 +95,27 @@ export default function SkillSet() {
               <Box w={400}>
                 <InViewWrapper variant={bulletTextVariant(0.6, 0, 60, 1)}>
                   <Box pb={5}>
-                    <Text className="secondText">Various AWS Services</Text>
+                    <Text className="secondText">Various AWS Services <span className="firstTextAW">90%</span></Text>
                     <Progress hasStripe value={90} />
                   </Box>
                 </InViewWrapper>
                 <InViewWrapper variant={bulletTextVariant(0.8, 0, 60, 1)}>
                   <Box pb={5}>
-                    <Text className="secondText">Python</Text>
+                    <Text className="secondText">Python <span className="firstTextp">60%</span></Text>
 
-                    <Progress hasStripe value={90} />
+                    <Progress hasStripe value={60} />
                   </Box>
                 </InViewWrapper>
                 <InViewWrapper variant={bulletTextVariant(1, 0, 60, 1)}>
                   <Box pb={5}>
-                    <Text className="secondText">JavaScript</Text>
-                    <Progress hasStripe value={90} />
+                    <Text className="secondText">JavaScript <span className="firstTextJ">70%</span></Text>
+                    <Progress hasStripe value={70} />
                   </Box>
                 </InViewWrapper>
                 <InViewWrapper variant={bulletTextVariant(1.2, 0, 60, 1)}>
                   <Box pb={5}>
-                    <Text className="secondText">Cloud Pentest</Text>
-                    <Progress hasStripe value={40} />
+                    <Text className="secondText">Cloud Pentest <span className="firstTextCP">50%</span></Text>
+                    <Progress hasStripe value={50} />
                   </Box>
                 </InViewWrapper>
               </Box>
